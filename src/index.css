@@ -125,7 +125,7 @@ body {
   background-image: url('./Images/kansas-city-dentist-summer-heat.jpeg');
 } */
 
-main {
+ main {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -246,4 +246,4 @@ a.dogBtn {
 a.dogBtn:hover, a.dogBtn:focus {
   font-size: 1.2em;
   background: rgba(255,255,255, .8);
-}
+} 
