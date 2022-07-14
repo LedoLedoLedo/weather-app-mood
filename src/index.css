@@ -103,6 +103,7 @@ main {
 body {
   font-family: 'montserrat', sans-serif;
   font-family: 'M PLUS Rounded 1c', 'Montserrat', sans-serif;  
+  color: #fff;
 
   background: rgba(148,187,233,1);
   background: linear-gradient(0deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);  
@@ -120,8 +121,11 @@ body {
   background: linear-gradient(0deg, #00d2ff 0%, #3a47d5 100%);
 }
 
+/* .app.warm {
+  background-image: url('./Images/kansas-city-dentist-summer-heat.jpeg');
+} */
 
-/* main {
+main {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -191,24 +195,36 @@ body {
   color: #FFF;
   font-size: 20px;
   font-weight: 300;
-  font-style: italic;
   text-align: center;
 }
 
 .weather-box {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .weather-box .temp {
   padding: 15px 25px;
   color: #FFF;
-  font-size: 102px;
+  font-size: 6em;
   font-weight: 900;
   text-align: center;
-}
+} 
 
-.weather-box .weather {
+ .weather-box .weather {
   color: #FFF;
-  font-size: 48px;
-  font-weight: 700;
-}  */
+  font-size: 2em;
+  font-weight: 300;
+} 
+
+.infoContainer {
+  height: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

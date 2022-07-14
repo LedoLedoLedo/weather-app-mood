@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import Health from "./components/Health";
+// import warmpic from "./Images/kansas-city-dentist-summer-heat.jpeg";
+// import Axios from "Axios"
 
 const api = {
   key: "4f0e9ab198c06f612c6d248b4dc785ab",
   base: "https://api.openweathermap.org/data/2.5/",
 };
- 
+
 function App() {
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
@@ -21,8 +22,6 @@ function App() {
         });
     }
   };
-
-  
 
   const dateBuilder = (d) => {
     let months = [
@@ -58,9 +57,7 @@ function App() {
   };
 
   return (
-    
     <div
-    
       className={
         typeof weather.main != "undefined"
           ? weather.main.temp > 16
@@ -82,7 +79,7 @@ function App() {
             />
           </div>
           {typeof weather.main != "undefined" ? (
-            <div>
+            <div className="infoContainer">
               <div className="location-box">
                 <div className="location">
                   {weather.name}, {weather.sys.country}
@@ -91,17 +88,27 @@ function App() {
               </div>
               <div className="weather-box">
                 <div className="temp">{Math.round(weather.main.temp)}°f</div>
-                <div className="weather">{weather.weather[0].main}</div>
+                <div className="weather">
+                
+                  {/* <div className="weather">{weather.weather[0].icon}</div> */}
+                  <img
+                    src="http://openweathermap.org/img/w/03n.png"
+                    alt="icon"
+                  />
+                </div>
+                <div className="weather">{weather.weather[0].description}</div>
+              </div>
+              <div>
+                <p></p>
               </div>
             </div>
           ) : (
-            ""
+            <div>Alejandro</div>
           )}
         </div>
       </main>
     </div>
   );
-
 }
 
 export default App;
