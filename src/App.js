@@ -3,7 +3,7 @@ import React, { useState } from "react";
 // import Axios from "Axios"
 
 const api = {
-  key: "4f0e9ab198c06f612c6d248b4dc785ab",
+  key: process.env.REACT_APP_WEATHER_KEY,
   base: "https://api.openweathermap.org/data/2.5/",
 };
 
