@@ -66,6 +66,9 @@ function App() {
           : "app"
       }
     >
+      <a className="dogBtn" href="https://random.dog/" target="_blank">
+        mood enhancer
+      </a>
       <main>
         <div className="widget">
           <div className="search-box">
@@ -89,10 +92,9 @@ function App() {
               <div className="weather-box">
                 <div className="temp">{Math.round(weather.main.temp)}°f</div>
                 <div className="weather">
-                
                   {/* <div className="weather">{weather.weather[0].icon}</div> */}
                   <img
-                    src="http://openweathermap.org/img/w/03n.png"
+                    src={`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`}
                     alt="icon"
                   />
                 </div>
@@ -103,7 +105,7 @@ function App() {
               </div>
             </div>
           ) : (
-            <div>Alejandro</div>
+            <div>-</div>
           )}
         </div>
       </main>
